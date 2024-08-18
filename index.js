@@ -9,7 +9,7 @@
 // app.use(cors());
 // app.use(bodyParser.json());
 
-// mongoose.connect('mongodb://127.0.0.1:27017/Angularidentity', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb+srv://gk24014:Neeraj@cluster0.4vkgn.mongodb.net/angular?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 
