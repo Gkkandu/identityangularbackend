@@ -3,22 +3,22 @@
 // const cors = require('cors');
 // const mongoose = require('mongoose');
 // const multer = require('multer');
-// const Identity = require('./model');
+// const Identity = require('./models/model');
 
 // const app = express();
 // app.use(cors());
 // app.use(bodyParser.json());
 
-// mongoose.connect('mongodb+srv://gk24014:Neeraj@cluster0.4vkgn.mongodb.net/angular?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://127.0.0.1:27017/Angularidentity', { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 
 // app.post("/users/register", (req, res) => {
 //   const { name, father, mother, gender, mobile, email, address } = req.body;
-  
+
 // const newIdentity = new Identity({ name, father, mother, gender, mobile, email, address });
 
-  
+
 //   // Save the new document to the database
 //   newIdentity.save()
 //     .then(savedIdentity => res.json(savedIdentity))
@@ -76,13 +76,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const Identity = require('./models/model');
+const Identity = require('./model');
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/Angularidentity', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://127.0.0.1:27017/Angularidentity', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://gk24014:Neeraj@cluster0.4vkgn.mongodb.net/angular?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.post("/users/register", (req, res) => {
   const { name, father, mother, gender, mobile, email, address } = req.body;
