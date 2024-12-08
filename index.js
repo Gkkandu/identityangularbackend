@@ -3,7 +3,7 @@
 // const cors = require('cors');
 // const mongoose = require('mongoose');
 // const multer = require('multer');
-// const Identity = require('./models/model');
+// const Identity = require('./model');
 
 // const app = express();
 // app.use(cors());
